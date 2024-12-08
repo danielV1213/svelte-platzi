@@ -33,7 +33,7 @@
   }
 
   main img {
-    width: 50%;
+    width: 30%;
   }
 
   h1 {
