@@ -1,15 +1,29 @@
 <script>
   import About from "./components/About.svelte";
+  import Text from "./components/Text.svelte";
+  import Person from "./components/Person.svelte";
 
   export let name;
   export let lastName;
   let svelteLogo =
     "https://user-images.githubusercontent.com/218949/63261050-6ce11600-c27a-11e9-9355-1ee226b4497c.png";
+  let text = "Hola";
+  let textTwo = "Mundo!";
+
+  const data = {
+    name: "Daniel",
+    lastName: "Vélez",
+    age: 22,
+  };
 </script>
 
 <main>
   <h1>My name is {name} {lastName}!</h1>
   <About />
+  <!-- Here are two ways to pass props -->
+  <Text textOne={text} {textTwo} />
+  <!-- Passing data with object propagation -->
+  <Person {...data} />
   <img src={svelteLogo} alt="svelte-logo" />
 </main>
 
