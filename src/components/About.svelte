@@ -1,4 +1,6 @@
 <script>
+  import Button from "./Button.svelte";
+
   let someText = `Frontend Developer at Globant`;
   let count = 0;
   let styles = { darkMode: false };
@@ -20,8 +22,8 @@
     <p class="dark-mode-paragraph">Hello Dark Mode</p>
   {/if}
 
-  <button on:click={increase}>Click {count === 0 ? "" : count}</button>
-  <button on:click={toggle}>DarkMode</button>
+  <Button text="Click" {count} on:click={increase} />
+  <Button text="DarkMode" on:click={toggle} />
 </div>
 
 <style>
