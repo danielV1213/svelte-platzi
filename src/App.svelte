@@ -2,6 +2,7 @@
   import About from "./components/About.svelte";
   import Text from "./components/Text.svelte";
   import Person from "./components/Person.svelte";
+  import Skills from "./components/Skills.svelte";
 
   export let name;
   export let lastName;
@@ -24,6 +25,7 @@
   <Text textOne={text} {textTwo} />
   <!-- Passing data with object propagation -->
   <Person {...data} />
+  <Skills />
   <img src={svelteLogo} alt="svelte-logo" />
 </main>
 
